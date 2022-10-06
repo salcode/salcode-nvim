@@ -40,7 +40,10 @@ packer.startup(function(use)
   -- actual plugins list
   use({ "wbthomason/packer.nvim" })
   use({ "christoomey/vim-tmux-navigator" })
-  use({ "dracula/vim", as = "dracula" })
+  use({
+    "dracula/vim",
+    config = get_config("dracula"),
+  })
   use({ "editorconfig/editorconfig-vim" })
   use({ "tpope/vim-commentary" })
   use({ "tpope/vim-unimpaired" })
@@ -52,12 +55,3 @@ packer.startup(function(use)
     config = get_config("airline"),
   })
 end)
-
-local colorscheme = "dracula"
-local status_ok = pcall(vim.cmd, "colorscheme " .. colorscheme)
-
-if not status_ok then
-	vim.notify("Failed to set colorscheme \"" .. colorscheme .. "\"")
-end
-
-
