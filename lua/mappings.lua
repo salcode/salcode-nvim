@@ -10,3 +10,7 @@ set("n", "<leader>ts2", ":set tabstop=2 softtabstop=2 shiftwidth=2 expandtab<CR>
 set("n", "<leader>ts4", ":set tabstop=4 softtabstop=4 shiftwidth=4 expandtab<CR>")
 -- Set indentation to tabs, rendered as size 4 spaces.
 set("n", "<leader>tt4", ":set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab<CR>")
+
+-- Easy insertion of a trailing ; or , from insert mode
+vim.keymap.set('i', ';;', '<Esc>A;<Esc>')
+vim.keymap.set('i', ',,', '<Esc>A,<Esc>')
