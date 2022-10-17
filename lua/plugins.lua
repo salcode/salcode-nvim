@@ -41,7 +41,7 @@ packer.startup(function(use)
   use({ "wbthomason/packer.nvim" })
   use({ "christoomey/vim-tmux-navigator" })
   use({
-    "dracula/vim",
+    "Mofiqul/dracula.nvim",
     config = get_config("dracula"),
   })
   use({ "editorconfig/editorconfig-vim" })
