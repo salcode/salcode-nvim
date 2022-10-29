@@ -45,6 +45,11 @@ packer.startup(function(use)
     config = get_config("dracula"),
   })
   use({ "editorconfig/editorconfig-vim" })
+  use({
+    "neoclide/coc.nvim",
+    branch = 'release',
+    config = get_config("coc"),
+  })
   use({ "tpope/vim-commentary" })
   use({ "tpope/vim-unimpaired" })
   use({ "tpope/vim-vinegar" })
