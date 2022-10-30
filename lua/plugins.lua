@@ -54,6 +54,7 @@ packer.startup(function(use)
     "tpope/vim-commentary",
     config = get_config("commentary"),
   })
+  use({ "tpope/vim-fugitive" })
   use({ "tpope/vim-unimpaired" })
   use({
     "tpope/vim-vinegar",
