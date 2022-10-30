@@ -14,3 +14,7 @@ set("n", "<leader>tt4", ":set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab<C
 -- Easy insertion of a trailing ; or , from insert mode
 vim.keymap.set('i', ';;', '<Esc>A;<Esc>')
 vim.keymap.set('i', ',,', '<Esc>A,<Esc>')
+
+-- When text is wrapped, move by terminal rows, not lines, unless a count is provided
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true })
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true })
