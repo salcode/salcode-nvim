@@ -50,7 +50,10 @@ packer.startup(function(use)
     branch = 'release',
     config = get_config("coc"),
   })
-  use({ "tpope/vim-commentary" })
+  use({
+    "tpope/vim-commentary",
+    config = get_config("commentary"),
+  })
   use({ "tpope/vim-unimpaired" })
   use({ "tpope/vim-vinegar" })
   use({ "vim-airline/vim-airline" })
