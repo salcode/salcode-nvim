@@ -55,7 +55,10 @@ packer.startup(function(use)
     config = get_config("commentary"),
   })
   use({ "tpope/vim-unimpaired" })
-  use({ "tpope/vim-vinegar" })
+  use({
+    "tpope/vim-vinegar",
+    config = get_config("vinegar"),
+  })
   use({ "vim-airline/vim-airline" })
   use({
     "vim-airline/vim-airline-themes",
