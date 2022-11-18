@@ -18,3 +18,4 @@ o.ignorecase = true
 o.smartcase = true
 o.hlsearch = true
 o.incsearch = true
+o.iskeyword:append "-"
