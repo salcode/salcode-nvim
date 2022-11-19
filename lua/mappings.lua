@@ -18,3 +18,6 @@ vim.keymap.set('i', ',,', '<Esc>A,<Esc>')
 -- When text is wrapped, move by terminal rows, not lines, unless a count is provided
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true })
+
+-- Do not replace register contents when pasting over a visual selection
+set("v", "p", '"_dP')
