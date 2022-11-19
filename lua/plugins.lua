@@ -30,7 +30,11 @@ vim.cmd([[
 ]])
 
 -- initialize and configure packer
-local packer = require("packer")
+-- Use a protected call so we don't error out on first use
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+	return
+end
 
 packer.init({
   enable = true, -- enable profiling via :PackerCompile profile=true
