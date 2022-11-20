@@ -6,3 +6,9 @@ vim.api.nvim_create_user_command(
     range = true,
   }
 )
+
+vim.api.nvim_create_user_command(
+  'BD',
+  'b#|bd #',
+  {}
+)
