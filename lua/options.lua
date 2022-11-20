@@ -21,3 +21,4 @@ o.hlsearch = true
 o.incsearch = true
 o.iskeyword:append "-"
 o.showtabline = 2 -- always show tabline
+o.cursorline = true
