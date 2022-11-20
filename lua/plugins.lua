@@ -11,7 +11,7 @@ end
 
 -- bootstrap packer if not installed
 if fn.empty(fn.glob(install_path)) > 0 then
-  fn.system({
+  PACKER_BOOTSTRAP = fn.system({
     "git",
     "clone",
     "https://github.com/wbthomason/packer.nvim",
@@ -78,4 +78,10 @@ packer.startup(function(use)
     requires = "vim-airline/vim-airline",
     config = get_config("airline"),
   })
+
+  -- Automatically set up your configuration after cloning packer.nvim
+  -- Put this at the end after all plugins
+  if PACKER_BOOTSTRAP then
+	  require("packer").sync()
+  end
 end)
