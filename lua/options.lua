@@ -4,6 +4,7 @@ vim.g.mapleader = " "
 
 local o = vim.opt
 o.clipboard = "unnamedplus"
+o.fileencoding = "utf-8"
 o.expandtab = false
 o.shiftwidth = 4
 o.tabstop = 4
