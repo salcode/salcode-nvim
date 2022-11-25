@@ -16,6 +16,9 @@ ls.add_snippets( "php", {
 	ls.parser.parse_snippet('class', 'class $1\n{\n    $0\n}'),
 })
 
+-- lazy load snippets from rafamadriz/friendly-snippets
+require("luasnip.loaders.from_vscode").lazy_load()
+
 -- Map "Ctrl + p" (in insert mode)
 -- to expand snippet and jump through fields.
 vim.keymap.set(
