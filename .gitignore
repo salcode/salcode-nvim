@@ -2,7 +2,7 @@
 # .gitignore
 # Bare Minimum Git
 # https://salferrarello.com/starter-gitignore-file/
-# ver 20220720
+# ver 20221125
 #
 # From the root of your project run
 # curl -O https://gist.githubusercontent.com/salcode/10017553/raw/.gitignore
@@ -27,6 +27,7 @@
 # use `git rm --cached`
 #
 # Change Log:
+# 20220720 unignore /.git-blame-ignore-revs
 # 20220720 ignore /build directory
 # 20220128 unignore .nvmrc
 # 20210211 unignore .env.example
@@ -110,6 +111,7 @@ Thumbs.db
 # track these files, if they exist
 !.editorconfig
 !.env.example
+!.git-blame-ignore-revs
 !.gitignore
 !.nvmrc
 !.phpcs.xml.dist
