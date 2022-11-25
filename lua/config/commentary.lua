@@ -1,9 +1,9 @@
 vim.api.nvim_create_autocmd(
-    "FileType",
-    {
-      pattern = {
-        "php",
-      },
-      command = "setlocal commentstring=//%s",
-    }
+	"FileType",
+	{
+		pattern = {
+			"php",
+		},
+		command = "setlocal commentstring=//%s",
+	}
 )

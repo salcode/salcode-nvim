@@ -1,5 +1,5 @@
 vim.g.coc_global_extensions = {
-  'coc-tsserver',
+	'coc-tsserver',
 }
 
 -- map <CR> when in insert mode

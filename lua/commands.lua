@@ -1,14 +1,14 @@
 -- :JSONFormat to format current line (or visual selection) as JSON
 vim.api.nvim_create_user_command(
-  'JSONFormat',
-  '<line1>,<line2>!python -m json.tool',
-  {
-    range = true,
-  }
+	'JSONFormat',
+	'<line1>,<line2>!python -m json.tool',
+	{
+		range = true,
+	}
 )
 
 vim.api.nvim_create_user_command(
-  'BD',
-  'b#|bd #',
-  {}
+	'BD',
+	'b#|bd #',
+	{}
 )
