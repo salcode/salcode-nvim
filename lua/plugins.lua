@@ -63,6 +63,14 @@ packer.startup(function(use)
 		config = get_config("coc"),
 	})
 	use({
+		"L3MON4D3/LuaSnip",
+		tag = "v1.*",
+		config = get_config("luasnip"),
+		requires = {
+			"rafamadriz/friendly-snippets", -- library of snippets
+		}
+	})
+	use({
 		"tpope/vim-commentary",
 		config = get_config("commentary"),
 	})
