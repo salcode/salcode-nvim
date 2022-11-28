@@ -4,6 +4,9 @@ if not cmp_status_ok then
 end
 
 cmp.setup({
+	mapping = cmp.mapping.preset.insert({
+		['<CR>'] = cmp.mapping.confirm({ select = true }),
+	}),
 	-- Order matters for sources.
 	sources = {
 		{ name = "buffer" },
