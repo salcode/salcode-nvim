@@ -58,9 +58,14 @@ packer.startup(function(use)
 	})
 	use({ "editorconfig/editorconfig-vim" })
 	use({
-		"neoclide/coc.nvim",
-		branch = 'release',
-		config = get_config("coc"),
+		"hrsh7th/nvim-cmp",
+		config = get_config("cmp"),
+		requires = {
+			"nat-418/cmp-color-names.nvim", -- CSS web color names completion
+			"hrsh7th/cmp-buffer",           -- buffer completion
+			"hrsh7th/cmp-path",             -- path completions
+			"saadparwaiz1/cmp_luasnip",     -- snippet completions
+		}
 	})
 	use({
 		"L3MON4D3/LuaSnip",
