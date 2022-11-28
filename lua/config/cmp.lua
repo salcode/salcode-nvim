@@ -15,6 +15,7 @@ cmp.setup({
 			vim_item.menu = ({
 				buffer = "[Buffer]",
 				color_names = "[Color]",
+				path = "[Path]",
 			})[entry.source.name]
 			return vim_item
 		end,
@@ -26,5 +27,6 @@ cmp.setup({
 	sources = {
 		{ name = "buffer" },
 		{ name = "color_names" },
+		{ name = "path" },
 	},
 })

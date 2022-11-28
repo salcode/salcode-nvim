@@ -63,6 +63,7 @@ packer.startup(function(use)
 		requires = {
 			"nat-418/cmp-color-names.nvim", -- CSS web color names completion
 			"hrsh7th/cmp-buffer",           -- buffer completion
+			"hrsh7th/cmp-path",             -- path completions
 		}
 	})
 	use({
