@@ -9,6 +9,13 @@ if color_names_status_ok then
 end
 
 cmp.setup({
+	formatting = {
+		fields = { "abbr", "kind", "menu" },
+		format = function(entry, vim_item)
+			vim_item.menu = entry.source.name
+			return vim_item
+		end,
+	},
 	mapping = cmp.mapping.preset.insert({
 		['<CR>'] = cmp.mapping.confirm({ select = true }),
 	}),
