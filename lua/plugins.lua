@@ -58,11 +58,6 @@ packer.startup(function(use)
 	})
 	use({ "editorconfig/editorconfig-vim" })
 	use({
-		"neoclide/coc.nvim",
-		branch = 'release',
-		config = get_config("coc"),
-	})
-	use({
 		"L3MON4D3/LuaSnip",
 		tag = "v1.*",
 		config = get_config("luasnip"),
