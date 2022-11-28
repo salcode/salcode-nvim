@@ -58,6 +58,13 @@ packer.startup(function(use)
 	})
 	use({ "editorconfig/editorconfig-vim" })
 	use({
+		"hrsh7th/nvim-cmp",
+		config = get_config("cmp"),
+		requires = {
+			"hrsh7th/cmp-buffer",           -- buffer completion
+		}
+	})
+	use({
 		"L3MON4D3/LuaSnip",
 		tag = "v1.*",
 		config = get_config("luasnip"),
