@@ -12,7 +12,10 @@ cmp.setup({
 	formatting = {
 		fields = { "abbr", "kind", "menu" },
 		format = function(entry, vim_item)
-			vim_item.menu = entry.source.name
+			vim_item.menu = ({
+				buffer = "[Buffer]",
+				color_names = "[Color]",
+			})[entry.source.name]
 			return vim_item
 		end,
 	},
