@@ -3,6 +3,8 @@ if not cmp_status_ok then
   return
 end
 
+local snip_status_ok, luasnip = pcall(require, "luasnip")
+
 local color_names_status_ok, color_names = pcall(require, "cmp-color-names")
 if color_names_status_ok then
 	color_names.setup()
@@ -26,12 +28,16 @@ cmp.setup({
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
+			elseif snip_status_ok and luasnip.expand_or_jumpable() then
+				luasnip.expand_or_jump()
 			else
 				fallback()
 			end
 		end),
 		["<S-Tab>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
+			if snip_status_ok and luasnip.jumpable(-1) then
+				luasnip.jump(-1)
+			elseif cmp.visible() then
 				cmp.select_prev_item()
 			else
 				fallback()
