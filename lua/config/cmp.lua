@@ -15,6 +15,7 @@ cmp.setup({
 			vim_item.menu = ({
 				buffer = "[Buffer]",
 				color_names = "[Color]",
+				luasnip = "[Snippet]",
 				path = "[Path]",
 			})[entry.source.name]
 			return vim_item
@@ -39,6 +40,7 @@ cmp.setup({
 	}),
 	-- Order matters for sources.
 	sources = {
+		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "color_names" },
 		{ name = "path" },
