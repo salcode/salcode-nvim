@@ -29,4 +29,8 @@ cmp.setup({
 		{ name = "color_names" },
 		{ name = "path" },
 	},
+	window = {
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
+	},
 })
