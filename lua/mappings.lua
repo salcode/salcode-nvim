@@ -23,3 +23,9 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true })
 
 -- Do not replace register contents when pasting over a visual selection
 set("v", "p", '"_dP')
+
+-- Map Buffer navigation [B, [b, ]b, ]B
+set("n", "[b", ":bprevious<CR>");
+set("n", "[B", ":bfirst<CR>");
+set("n", "]b", ":bnext<CR>");
+set("n", "]B", ":blast<CR>");
