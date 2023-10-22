@@ -16,4 +16,5 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 
 require("options")
+require("mappings")
 require("lazy").setup({})
