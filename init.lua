@@ -28,5 +28,17 @@ require("lazy").setup({
 		end,
 	},
 	"christoomey/vim-tmux-navigator",
+	{
+		"tpope/vim-commentary",
+		config = function()
+			vim.api.nvim_create_autocmd(
+				"FileType",
+				{
+					pattern = { "php" },
+					command = "setlocal commentstring=//%s",
+				}
+			)
+		end
+	},
 	"tpope/vim-vinegar",
 })
