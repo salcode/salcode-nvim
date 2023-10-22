@@ -28,6 +28,7 @@ require("lazy").setup({
 		end,
 	},
 	"christoomey/vim-tmux-navigator",
+	"editorconfig/editorconfig-vim",
 	{
 		"tpope/vim-commentary",
 		config = function()
