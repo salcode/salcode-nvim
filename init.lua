@@ -27,4 +27,5 @@ require("lazy").setup({
 			vim.cmd([[colorscheme dracula]])
 		end,
 	},
+	"christoomey/vim-tmux-navigator",
 })
