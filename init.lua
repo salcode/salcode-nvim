@@ -81,6 +81,7 @@ require("lazy").setup({
 			)
 		end
 	},
+	"tpope/vim-fugitive",
 	{
 		"vim-airline/vim-airline",
 		config = function()
