@@ -30,6 +30,7 @@ require("lazy").setup({
 	},
 	"christoomey/vim-tmux-navigator",
 	"editorconfig/editorconfig-vim",
+	"justinmk/vim-dirvish",
 	{
 		"tpope/vim-commentary",
 		config = function()
@@ -61,5 +62,4 @@ require("lazy").setup({
 		end,
 		dependencies = "vim-airline/vim-airline-themes",
 	},
-	"tpope/vim-vinegar",
 })
