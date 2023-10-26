@@ -29,3 +29,6 @@ set("n", "[b", ":bprevious<CR>");
 set("n", "[B", ":bfirst<CR>");
 set("n", "]b", ":bnext<CR>");
 set("n", "]B", ":blast<CR>");
+
+-- Select content you just pasted.
+vim.keymap.set("n", "gp", "`[V`]")
