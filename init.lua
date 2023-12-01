@@ -29,6 +29,9 @@ require("lazy").setup({
 		end,
 	},
 	"christoomey/vim-tmux-navigator",
+	{
+		"dense-analysis/ale",
+	},
 	"editorconfig/editorconfig-vim",
 	"justinmk/vim-dirvish",
 	{
