@@ -33,6 +33,7 @@ require("lazy").setup({
 		"dense-analysis/ale",
 	},
 	"editorconfig/editorconfig-vim",
+	"github/copilot.vim",
 	"justinmk/vim-dirvish",
 	{
 		-- Adds git related signs to the gutter, as well as utilities for managing changes
