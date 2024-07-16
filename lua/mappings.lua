@@ -30,5 +30,11 @@ set("n", "[B", ":bfirst<CR>");
 set("n", "]b", ":bnext<CR>");
 set("n", "]B", ":blast<CR>");
 
+-- Map Quickfix navigation [Q, [q, ]q, ]Q
+set("n", "[q", ":cprev<CR>");
+set("n", "[Q", ":cfirst<CR>");
+set("n", "]q", ":cnext<CR>");
+set("n", "]Q", ":clast<CR>");
+
 -- Select content you just pasted.
 vim.keymap.set("n", "gp", "`[V`]")
