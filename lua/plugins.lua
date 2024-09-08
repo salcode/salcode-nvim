@@ -1,5 +1,4 @@
 return {
-	"tpope/vim-fugitive",
 	"tpope/vim-rhubarb",
 	{
 		"vim-airline/vim-airline",
