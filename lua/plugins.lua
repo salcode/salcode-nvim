@@ -1,7 +1,4 @@
 return {
-	{
-		"dense-analysis/ale",
-	},
 	"editorconfig/editorconfig-vim",
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
