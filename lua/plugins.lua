@@ -1,5 +1,4 @@
 return {
-	"editorconfig/editorconfig-vim",
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
 		dependencies = {
