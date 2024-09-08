@@ -1,5 +1,4 @@
 return {
-	"christoomey/vim-tmux-navigator",
 	{
 		"dense-analysis/ale",
 	},
