@@ -11,6 +11,7 @@ return {
 		lazy = false,
 		opts = {
 			ensure_installed = {
+				"phpactor", -- php
 				"vtsls", -- javascript,
 			},
 		},
@@ -20,6 +21,7 @@ return {
 		lazy = false,
 		config = function()
 			local lspconfig = require("lspconfig")
+			lspconfig.phpactor.setup({})
 			lspconfig.vtsls.setup({})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
