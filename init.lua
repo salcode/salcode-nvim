@@ -38,3 +38,15 @@ require("lazy").setup('plugins',
     },
   },
 })
+
+local function paste_character_wise()
+	local register_value = vim.fn.getreg(vim.v.register)
+	if vim.fn.getregtype(vim.v.register) == "V" then
+		-- Register is linewise
+		-- Paste characterwise and trim trailing newline
+		vim.api.nvim_paste(register_value:gsub("\n$", ""), true, -1)
+	else
+		-- Default paste behavior.
+		vim.api.nvim_paste(register_value, true, -1)
+	end
+end
