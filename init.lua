@@ -39,7 +39,7 @@ require("lazy").setup('plugins',
   },
 })
 
-local function paste_character_wise()
+local function paste_characterwise()
 	local register_value = vim.fn.getreg(vim.v.register)
 	if vim.fn.getregtype(vim.v.register) == "V" then
 		-- Register is linewise
@@ -50,4 +50,4 @@ local function paste_character_wise()
 		vim.api.nvim_paste(register_value, true, -1)
 	end
 end
-vim.keymap.set('n', '<leader>p', paste_character_wise, { desc = "Paste characterwise" })
+vim.keymap.set('n', '<leader>p', paste_characterwise, { desc = "Paste characterwise" })
