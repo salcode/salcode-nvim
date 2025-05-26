@@ -50,3 +50,4 @@ local function paste_character_wise()
 		vim.api.nvim_paste(register_value, true, -1)
 	end
 end
+vim.keymap.set('n', '<leader>p', paste_character_wise, { desc = "Paste characterwise" })
