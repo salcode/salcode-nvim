@@ -39,15 +39,20 @@ require("lazy").setup('plugins',
   },
 })
 
-local function paste_characterwise()
-	local register_value = vim.fn.getreg(vim.v.register)
-	if vim.fn.getregtype(vim.v.register) == "V" then
-		-- Register is linewise
-		-- Paste characterwise and trim trailing newline
-		vim.api.nvim_paste(register_value:gsub("\n$", ""), true, -1)
-	else
-		-- Default paste behavior.
-		vim.api.nvim_paste(register_value, true, -1)
-	end
-end
-vim.keymap.set('n', '<leader>p', paste_characterwise, { desc = "Paste characterwise" })
+vim.keymap.set(
+	'n',
+	'<leader>p',
+	function()
+		local register_value = vim.fn.getreg(vim.v.register)
+		if vim.fn.getregtype(vim.v.register) == "V" then
+			-- Register is linewise
+			-- Paste characterwise and trimming leading spaces and trailing
+			-- spaces and changelog.
+			vim.api.nvim_paste(register_value:gsub("%s*\n$", ""):gsub("^%s*", ""), true, -1)
+		else
+			-- Default paste behavior.
+			vim.api.nvim_paste(register_value, true, -1)
+		end
+	end,
+	{ desc = "Paste characterwise" }
+)
