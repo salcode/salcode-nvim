@@ -2,12 +2,12 @@
 
 ## Setup
 
-### 1. Make Backup of Existing files in `~/code/nvim`
+### 1. Make Backup of Existing files in `~/.config/nvim`
 
-### 2. Remove Existing `~/code/nvim`
+### 2. Remove Existing `~/.config/nvim`
 
 ```
-rm -rf ~/code/nvim
+rm -rf ~/.config/nvim
 ```
 
 ### 3. Clone repo
