@@ -1,5 +1,5 @@
 return {
-  "salcode/paste-characterwise.nvim",
+  "https://codeberg.org/salcode/paste-characterwise.nvim",
 	config = function()
 		vim.keymap.set(
 			'n',
