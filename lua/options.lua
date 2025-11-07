@@ -22,4 +22,4 @@ o.incsearch = true
 o.iskeyword:append "-"
 o.showtabline = 2 -- always show tabline
 o.cursorline = true
-o.nrformats:append('blank')
+o.nrformats:append 'blank'
