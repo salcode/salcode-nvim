@@ -38,3 +38,6 @@ set("n", "]Q", ":clast<CR>");
 
 -- Select content you just pasted.
 vim.keymap.set("n", "gp", "`[V`]")
+
+-- Enable indent folding and set folds to one level deep
+set("n", "<leader>z", ":set foldmethod=indent foldlevel=1<CR>")
